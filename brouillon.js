@@ -1,18 +1,31 @@
 //eau03
 
 
-// 1 MES FONCTIONS
+// 1 ARGUMENTS ET VARIABLES
+
+args = process.argv.slice(2)
 
 
-// 2 MA GESTION D'ERREUR(S)
+// 2 FONCTIONS
+
+function fibonacci(nbre){
+    let fib = [0,1,1,2]
 
 
-// 3 LE PASSING
+        for(let i=2 ; i<nbre ; i++){
+        fib.push(fib[i]+fib[i+1])   
+    } console.log(fib[nbre]);
+}
 
- 
-// 4 LA RESOLUTION
+// 3 GESTION D'ERREUR
+
+if ((isNaN(args)) || (args < 0)){
+    
+    console.log("-1");
+}
 
 
-// 5 LE RESULTAT
 
 
+// 4 RESOLUTION
+else fibonacci(args)
