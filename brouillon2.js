@@ -1,16 +1,15 @@
 args = process.argv.slice(2)
 
-function fibonacci(nbre){
-    let fib = [0,1,1,2]
+function nombrePremier(nombre){
 
+nbPrem = true
+    for(let i=0 ; i < args ; i++){
+        if(args%i == 0){
+        nbPrem = false
+        }  
+    }
 
-        for(let i=2 ; i<nbre ; i++){
-        fib.push(fib[i]+fib[i+1])   
-    } console.log(fib[nbre]);
+    console.log(nbPrem);
 }
 
-fibonacci(args)
-
-
-
-
+nombrePremier(args)
