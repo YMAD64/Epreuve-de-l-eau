@@ -1,35 +1,18 @@
-//MES FONCTIONS
-function ajoutAuTableau(){
-    for(let i=0 ; i<10 ; i++){
-        chM = 0 + i
+//eau03
 
-        for(let j=0 ; j<10 ; j++){
-            chC = 0 + j
 
-            for(let k=0 ; k<10 ; k++){
-                chD = 0 + k
+// 1 MES FONCTIONS
 
-                for(let l=0 ; l<10 ; l++){
-                    chU = 0 + l
 
-                    let nombre1 = `${chM}${chC}`
-                    let nombre2 = `${chD}${chU}`
-                    if (nombre1 < nombre2){
-                        arr.push(`${nombre1} ${nombre2}`)
-                    }
-                }
-            }
-        }
-    } 
-}
+// 2 MA GESTION D'ERREUR(S)
 
-let arr = []
-ajoutAuTableau()
-console.log(arr);
 
-function transformerTableauEnChaineEtAfficher(){
-    let chaine = arr.join(', ')
-    console.log(chaine);
-}
+// 3 LE PASSING
 
-transformerTableauEnChaineEtAfficher()
+ 
+// 4 LA RESOLUTION
+
+
+// 5 LE RESULTAT
+
+
