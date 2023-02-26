@@ -1,15 +1,29 @@
-args = process.argv.slice(2)
+const args = process.argv.slice(2)
+
+
 
 function nombrePremier(nombre){
 
-nbPrem = true
-    for(let i=0 ; i < args ; i++){
-        if(args%i == 0){
-        nbPrem = false
-        }  
-    }
-
-    console.log(nbPrem);
+    let nbN = false
+        for(let i=2 ; i < nombre ; i++){
+            if(nombre%i == 0){   
+                nbN = true
+            }
+            
+            } 
+        
+        if (nbN == true) return false
+        else if (nbN == false) return true
 }
 
-nombrePremier(args)
+
+tab = []
+for(let i=args ; i<args*2 ; i++){
+    if(nombrePremier(i)){
+        tab.push(i)
+    }
+}
+if((tab[0]) != args[0]){
+console.log(tab[0])
+}
+else console.log(tab[1]);
