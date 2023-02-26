@@ -1,7 +1,6 @@
 const args = process.argv.slice(2)
 
 
-
 function nombrePremier(nombre){
 
     let nbN = false
@@ -16,14 +15,9 @@ function nombrePremier(nombre){
         else if (nbN == false) return true
 }
 
-
-tab = []
-for(let i=args ; i<args*2 ; i++){
-    if(nombrePremier(i)){
-        tab.push(i)
+for(let i=args ; i>=args ; i++){
+    if ((nombrePremier(i)) && (i !== args)){
+        console.log(i)
+        break
     }
 }
-if((tab[0]) != args[0]){
-console.log(tab[0])
-}
-else console.log(tab[1]);

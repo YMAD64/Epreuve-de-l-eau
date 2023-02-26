@@ -21,7 +21,7 @@ function nombrePremier(nombre){
 
 // 3 GESTION D'ERREUR
 
-if ((isNaN(args)) || (args < 0) ||  (args.lenght =! 1)){
+if ((isNaN(args)) || (args < 0) ||  (args.length ==! 1)){
     
     console.log("-1");
     return false
@@ -32,13 +32,9 @@ if ((isNaN(args)) || (args < 0) ||  (args.lenght =! 1)){
 
 // 4 RESOLUTION
 
-else 
-for(let i=args ; i<args*2 ; i++){
-    if(nombrePremier(i)){
-        tab.push(i)
+else for(let i=args ; i>=args ; i++){
+    if ((nombrePremier(i)) && (i !== args)){
+        console.log(i)
+        break
     }
 }
-if((tab[0]) != args[0]){
-console.log(tab[0])
-}
-else console.log(tab[1]);
