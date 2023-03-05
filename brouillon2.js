@@ -3,73 +3,109 @@ arg1 = args[0]
 arg2 = args[1]
 
 
-function includes (argument1 , argument2){
 
-    let indexstart = -1
+function getIndexesInWord (arg1,arg2){
+    indexes = []
     for(let i=0 ; i < arg1.length ; i++){
-        for(let y=0 ; y < arg2.length ; y++){
-            if(arg1[i]==arg2[y]){
-                
-                indexstart = i
-            }
-            break
-        }
-    } console.log(indexstart);
-    retour = true
-        
-        if (indexstart<0){
-            retour = false
-        }
-        else for(let i=indexstart , j=0 ; i<arg1.length , j<arg2.length ; i++ , j++){
-            if(arg1[i]!==arg2[j]){
-                retour =  false
-            }
-        }
     
-    if(retour==true){
+        if(arg1[i]==arg2[0]){
+            
+            indexes.push(i)                    
+            }
+                
+        }
+
+}        
+        
+
+getIndexesInWord(arg1,arg2)
+
+function includes (tableau, argument1, argument2){
+
+for(let index of indexes){
+    let isGood = true
+    for(let i=0  ; i<argument2.length; i++){
+        if(arg1[index+i]!==argument2[i]){
+        isGood = false    
+        }
+    }if(isGood==true){
         return true
     }
-    else if(retour==false){
-        return false
+        
     }
-}
+            
+              
+}  
 
-if(includes(arg1 ,arg2)){
+if(includes(indexes, arg1, arg2)){
     console.log(true);
 }
-else console.log(false);
+else console.log(false);    
 
+    
 
+// function includes (argument1, argument2, tableau){
 
+//     retour = true
+//     let index = getIndexesInWord(argument1 , argument2)
 
-
-
-// for (let i=0 ; i<arg1.length ; i++){
-//   for (let j=0 ; j<arg2.length ; j++){
-//     if ((arg1[i])==(arg2[j])){
-//         console.log("cool");
+        
+//     for(let i=0 ; i<tableau.length; i++){
+//         for(let y=tab[i] , z=0 ; y<argument1.length , z<argument2.length ; y++ , z++){
+//             if (y==z){
+//                 console.log("cool");
+//             }
+//         }
+        
+//         if(argument1[tab[i]]!==arg2[j]){
+//                 retour =  false
+//             }
+//         }
+    
+//     if(retour==true){
+//         return true
 //     }
-//   }
+//     else if(retour==false){
+//         return false
+//     }
 // }
 
-
-
-
-
-
-
-// console.log(arg1);
-// console.log(arg2);
-
-
-
-
-
-
-
-
-// if(args[0].includes(args[1])){
-// console.log(true);
+// if(includes(arg1 ,arg2)){
+//     console.log(true);
 // }
 // else console.log(false);
+
+
+
+
+
+
+// // for (let i=0 ; i<arg1.length ; i++){
+// //   for (let j=0 ; j<arg2.length ; j++){
+// //     if ((arg1[i])==(arg2[j])){
+// //         console.log("cool");
+// //     }
+// //   }
+// // }
+
+
+
+
+
+
+
+// // console.log(arg1);
+// // console.log(arg2);
+
+
+
+
+
+
+
+
+// // if(args[0].includes(args[1])){
+// // console.log(true);
+// // }
+// // else console.log(false);
 

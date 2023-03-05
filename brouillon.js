@@ -1,4 +1,4 @@
-//eau03
+//eau04
 
 
 // 1 ARGUMENTS ET VARIABLES
@@ -10,31 +10,38 @@ arg2 = args[1]
 
 // 2 FONCTIONS
 
-
-function includes (argument1 , argument2){
-
-    let indexstart = -1
+function getIndexesInWord (arg1,arg2){
+    indexes = []
     for(let i=0 ; i < arg1.length ; i++){
-        for(let y=0 ; y < arg2.length ; y++){
-            if(arg1[i]==arg2[y]){
+    
+        if(arg1[i]==arg2[0]){
+            
+            indexes.push(i)                    
+        }
                 
-                indexstart = i
-            }
-            break
-        }
-    } console.log(indexstart);
-    retour = true
-        
-        if (indexstart<0){
-            retour = false
-        }
-        else for(let i=indexstart , j=0 ; i<arg1.length , j<arg2.length ; i++ , j++){
-            if(arg1[i]!==arg2[j]){
-                retour =  false
-            }
-        }
+    }
+
 }
 
+
+
+function includes (tableau, argument1, argument2){
+
+    for(let index of indexes){
+        let isGood = true
+        
+        for(let i=0  ; i<argument2.length; i++){
+            if(arg1[index+i]!==argument2[i]){
+                    isGood = false    
+                }
+            }   if(isGood==true){
+                return true
+        }
+            
+    }
+                
+                  
+}  
 
 // 3 GESTION D'ERREUR
 
@@ -46,7 +53,13 @@ if(args.length !=2){
 
 // 4 RESOLUTION
 
-else if(includes(arg1 ,arg2)){
+else if (args.length ==2){
+    getIndexesInWord(arg1,arg2)
+
+
+    if(includes(indexes, arg1, arg2)){
     console.log(true);
-}
-else console.log(false);
+    }
+
+    else console.log(false);    
+}   
