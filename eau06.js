@@ -6,13 +6,13 @@ const args = process.argv.slice(2).join(' ')
 
 // 2 FONCTIONS
 
-function returnOneUppercaseOnetwo(string){
+function returnUppercaseFisrt(string){
 
-    let min = "abcdefghijklmnopqrstuvwxyz"
+    let min = "abcdefghijklmnopqrstuvwxyz!-?"
 
-    let maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!-?"
 
-    let char = "!§:/;.,? "
+    let char = " ,"
 
     let newString = []
 
@@ -25,28 +25,29 @@ function returnOneUppercaseOnetwo(string){
         
       
         
-            if((string[i]==min[j]) && (index%2==0)){
+            if((string[i]==min[j]) && (index==0)){
             newString.push(maj[j])
             index=index+1
             }
 
-            else if ((string[i]==min[j]) && (index%2==1)){
+            else if ((string[i]==min[j]) && (index!==0)){
             newString.push(min[j])
             index=index+1
             }
 
-            else if ((string[i]==maj[j]) && (index%2==1)){
+            else if ((string[i]==maj[j]) && (index!==0)){
             newString.push(min[j])
             index=index+1
             }
 
-            else if ((string[i]==maj[j]) && (index%2==0)){
+            else if ((string[i]==maj[j]) && (index==0)){
             newString.push(maj[j])
             index=index+1
             }
 
             else if ((string[i]==char[j])){
             newString.push(char[j])
+            index=0
             }
         
         }
@@ -54,6 +55,7 @@ function returnOneUppercaseOnetwo(string){
     }
     console.log(newString.join(''))
 }
+
 
 // 3 GESTION D'ERREUR
 
@@ -66,9 +68,4 @@ if(isNaN(args)==false){
 // 4 RESOLUTION
 
 
-else returnOneUppercaseOnetwo(args)
-
-
-
-
-
+else returnUppercaseFisrt(args)
