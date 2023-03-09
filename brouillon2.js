@@ -1,27 +1,31 @@
 const args = process.argv.slice(2)
 
 
-function valeursCroisantesComprisesEntre(arg1, arg2){
+function returnIndex(string){
+
+let array = []
 
 
-    retour = []
-
-    if(arg1<arg2){
-        
-        for(let i=arg1 ; i<arg2 ; i++){
-            retour.push(i);
-            }
-        }
-
-    else if(arg1>arg2){
-    
-        for(let i=arg2 ; i<arg1 ; i++){
-        retour.push(i);
-        }
+    for (let i=0 ; i<string.length-1 ; i++){
+    array.push(string[i]);
     }
+ 
 
-    retourString = retour.join(' ')
-    console.log(retourString);
+
+
+    for(let y=0 ; y<array.length ; y++){
+        for(let z=args.length-1 ; z<=args.length ; z++){
+            if(array[y]==(args[z])){
+                return y
+            
+            }
+        
+        }
+        
+
+    }   return -1
 }
 
-valeursCroisantesComprisesEntre(args[0], args[1])
+
+
+console.log(returnIndex(args));
