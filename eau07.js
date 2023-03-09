@@ -1,6 +1,3 @@
-//eau07
-
-
 // 1 ARGUMENTS ET VARIABLES
 
 
@@ -28,7 +25,7 @@ function isNotNumber(char){
 
 function argIsNumber(argument){
     
-    // for(const char of argument){
+    // for(const char of argument){   --> autre solution avec une forof à la place de for
     //     if(isNotNumber(char)){
     //         return false
     //     }
@@ -50,8 +47,10 @@ function argIsNumber(argument){
 if(args.length==00){
     console.log("error");
 }
+
 // 4 RESOLUTION
- else console.log(argIsNumber(args))
+
+else console.log(argIsNumber(args))
 
 
 
