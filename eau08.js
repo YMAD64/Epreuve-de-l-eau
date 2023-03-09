@@ -1,5 +1,3 @@
-//eau07
-
 
 // 1 ARGUMENTS ET VARIABLES
 
@@ -41,9 +39,6 @@ if ((args.length !=2) || (isNaN(args[0])) || (isNaN(args[1]))){
 // 4 RESOLUTION
 
 else valeursCroisantesComprisesEntre(args[0], args[1])
-
-
-
 
 
 
