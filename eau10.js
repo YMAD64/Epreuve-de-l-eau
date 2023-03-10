@@ -1,6 +1,3 @@
-//eau10
-
-
 // 1 ARGUMENTS ET VARIABLES
 
 const args = process.argv.slice(2)
@@ -87,9 +84,3 @@ triTab(valAbsResult);
 
 console.log(valAbsResult[0])
 }
-
-
-
-
-
-
