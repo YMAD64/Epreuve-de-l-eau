@@ -36,13 +36,13 @@ function valAbs(tab){
 
 function triTab(tab){
 
-    for(let k=0 ; k<valAbsResult.length ; k++){
-        for(let l=0 ; l<valAbsResult.length ; l++){
+    for(let k=0 ; k<tab.length ; k++){
+        for(let l=0 ; l<tab.length ; l++){
         
-            if(valAbsResult[l]>valAbsResult[l+1]){
-                valMin = valAbsResult[l]
-                valAbsResult[l] = valAbsResult[l+1]
-                valAbsResult[l+1] = valMin
+            if(tab[l]>tab[l+1]){
+                valMin = tab[l]
+                tab[l] = tab[l+1]
+                tab[l+1] = valMin
 
             }
 
