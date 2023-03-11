@@ -1,26 +1,38 @@
 const args = process.argv.slice(2)
+let argsNumber = []
+
+function getNumber(array, newArray){
+
+
+    for (let i=0 ; i<array.length ; i++){
+        newArray.push(parseInt(array[i]))
+    }
+
+}
+
+getNumber(args, argsNumber)
+
 
 
 function my_bubble_sort(array){
 
-    for(let i=0 ; i<val.length ; k++){
-        for(let l=0 ; l<valAbsResult.length ; l++){
+   
+    for(let i=0 ; i<array.length ; i++){
+        for(let j=0 ; j<array.length ; j++){
         
-            if(valAbsResult[l]>valAbsResult[l+1]){
-                valMin = valAbsResult[l]
-                valAbsResult[l] = valAbsResult[l+1]
-                valAbsResult[l+1] = valMin
+            if(array[j]>array[j+1]){
+                valMax = array[j]
+                array[j] = array[j+1]
+                array[j+1] = valMax
 
             }
 
-        } 
-    
-    
-    }
+        }
+        
+    } 
+    return array
 }        
-resultatsSoustractions(args)
-valAbs(resultats)
-triTab(valAbsResult)
-console.log(valAbsResult[0]);
+console.log(my_bubble_sort(argsNumber).join(' '))
+
 
 

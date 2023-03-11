@@ -1,6 +1,3 @@
-//eau11
-
-
 // 1 ARGUMENTS ET VARIABLES
 
 const args = process.argv.slice(2)
@@ -66,7 +63,3 @@ else if ((tabVide(args)==false) && argsFalse(args)== false){
     getNumber(args, argsNumber)
     console.log(my_bubble_sort(argsNumber).join(' '))
 }
-
-
-
-
