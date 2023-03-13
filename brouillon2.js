@@ -14,16 +14,16 @@ getNumber(args, argsNumber)
 
 
 
-function my_bubble_sort(array){
+function my_select_sort(array){
 
    
     for(let i=0 ; i<array.length ; i++){
         for(let j=0 ; j<array.length ; j++){
         
-            if(array[j]>array[j+1]){
-                valMax = array[j]
-                array[j] = array[j+1]
-                array[j+1] = valMax
+            if(array[j+1]<array[j]){
+                valMin = array[j+1]
+                array[j+1] = array[j]
+                array[j] = valMin
 
             }
 
@@ -32,7 +32,7 @@ function my_bubble_sort(array){
     } 
     return array
 }        
-console.log(my_bubble_sort(argsNumber).join(' '))
+console.log(my_select_sort(argsNumber).join(' '))
 
 
 
