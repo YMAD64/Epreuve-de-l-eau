@@ -1,6 +1,10 @@
-let args = process.argv.slice(2)
+// 1 ARGUMENTS ET VARIABLES
 
-console.log(args);
+const args = process.argv.slice(2)
+
+
+// 2 FONCTIONS
+
 
 
 
@@ -31,38 +35,27 @@ function tirASCII(array){
             }
 
         }
-    }
+    } return array
 }
 
 
 
 
+function tabVide(tab){
+    if (tab.length < 2){
+        return true
+    }
+    return false 
+}  
+// 3 GESTION D'ERREUR
 
+if(tabVide(args)){
+    console.log("error");
+}
 
+// 4 RESOLUTION
 
-
-
-// function my_select_sort(array){
-
-   
-//     for(let i=0 ; i<array.length ; i++){
-//         for(let j=0 ; j<array.length ; j++){
-        
-//             if(array[j].charCodeAt(0)<array[j+1].charCodeAt(0)){
-//                 valMin = array[j+1].charCodeAt(0)
-//                 array[j+1].charCodeAt(0) = array[j].charCodeAt(0)
-//                 array[j].charCodeAt(0) = valMin
-
-//             }
-
-//         }
-        
-//     } 
-//     return array
-// }  
-
-// console.log(my_select_sort(array));
-
-
-
-
+else if (tabVide(args)==false){
+    
+    console.log(tirASCII(args).join(' '))
+}
