@@ -1,63 +1,48 @@
 // 1 ARGUMENTS ET VARIABLES
 
-
-const args = process.argv.slice(2).join(' ')
+args = process.argv.slice(2)
+arg1 = args[0]
+arg2 = args[1]
 
 
 // 2 FONCTIONS
 
-function returnOneUppercaseOnetwo(string){
-
-    let min = "abcdefghijklmnopqrstuvwxyz"
-
-    let maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    let char = "!§:/;.,? "
-
-    let newString = []
-
-    let index = 0
-
-    for(let i=0 ; i<string.length ; i++){
+function getIndexesInWord (arg1,arg2){
+    indexes = []
+    for(let i=0 ; i < arg1.length ; i++){
     
-    
-        for(let j=0 ; j<min.length ; j++){
-        
-      
-        
-            if((string[i]==min[j]) && (index%2==0)){
-            newString.push(maj[j])
-            index=index+1
-            }
-
-            else if ((string[i]==min[j]) && (index%2==1)){
-            newString.push(min[j])
-            index=index+1
-            }
-
-            else if ((string[i]==maj[j]) && (index%2==1)){
-            newString.push(min[j])
-            index=index+1
-            }
-
-            else if ((string[i]==maj[j]) && (index%2==0)){
-            newString.push(maj[j])
-            index=index+1
-            }
-
-            else if ((string[i]==char[j])){
-            newString.push(char[j])
-            }
-        
+        if(arg1[i]==arg2[0]){
+            
+            indexes.push(i)                    
         }
-        
+                
     }
-    console.log(newString.join(''))
+
 }
+
+
+
+function includes (tableau, argument1, argument2){
+
+    for(let index of indexes){
+        let isGood = true
+        
+        for(let i=0  ; i<argument2.length; i++){
+            if(arg1[index+i]!==argument2[i]){
+                    isGood = false    
+                }
+            }   if(isGood==true){
+                return true
+        }
+            
+    }
+                
+                  
+}  
 
 // 3 GESTION D'ERREUR
 
-if(isNaN(args)==false){
+if(args.length !=2){
     console.log("error");
 }
 
@@ -65,10 +50,13 @@ if(isNaN(args)==false){
 
 // 4 RESOLUTION
 
-
-else returnOneUppercaseOnetwo(args)
-
-
+else if (args.length ==2){
+    getIndexesInWord(arg1,arg2)
 
 
+    if(includes(indexes, arg1, arg2)){
+    console.log(true);
+    }
 
+    else console.log(false);    
+}   

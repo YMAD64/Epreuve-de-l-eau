@@ -1,44 +1,61 @@
-
 // 1 ARGUMENTS ET VARIABLES
 
-const args = process.argv.slice(2)
-//console.log(args.length);
+
+const args = process.argv.slice(2).join(' ')
+
 
 // 2 FONCTIONS
 
-function valeursCroisantesComprisesEntre(arg1, arg2){
+function isNotNumber(char){
 
-
-    retour = []
-
-    if(arg1<arg2){
-        
-        for(let i=arg1 ; i<arg2 ; i++){
-            retour.push(i);
-            }
-        }
-
-    else if(arg1>arg2){
+    let number = [0,1,2,3,4,5,6,7,8,9]
     
-        for(let i=arg2 ; i<arg1 ; i++){
-        retour.push(i);
+
+    for(let i=0 ; i<number.length ; i++){
+    
+    
+        if(char==number[i]){
+                return false
         }
     }
-
-    retourString = retour.join(' ')
-    console.log(retourString);
+    return true 
 }
 
 
+
+function argIsNumber(argument){
+    
+    // for(const char of argument){   --> autre solution avec une forof à la place de for
+    //     if(isNotNumber(char)){
+    //         return false
+    //     }
+    // } return true
+    
+    
+    
+    for(let i=0 ; i<argument.length ; i++){
+        
+        if(isNotNumber(argument[i])){
+            return false
+        } 
+           
+    }return true
+
+}
 // 3 GESTION D'ERREUR
 
-if ((args.length !=2) || (isNaN(args[0])) || (isNaN(args[1]))){
+if(args.length==00){
     console.log("error");
-} 
+}
 
 // 4 RESOLUTION
 
-else valeursCroisantesComprisesEntre(args[0], args[1])
+else console.log(argIsNumber(args))
+
+
+
+
+
 
 
 

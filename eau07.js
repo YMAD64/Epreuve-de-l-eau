@@ -6,55 +6,68 @@ const args = process.argv.slice(2).join(' ')
 
 // 2 FONCTIONS
 
-function isNotNumber(char){
+function returnUppercaseFisrt(string){
 
-    let number = [0,1,2,3,4,5,6,7,8,9]
-    
+    let min = "abcdefghijklmnopqrstuvwxyz!-?"
 
-    for(let i=0 ; i<number.length ; i++){
-    
-    
-        if(char==number[i]){
-                return false
-        }
-    }
-    return true 
-}
+    let maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!-?"
 
+    let char = " ,"
 
+    let newString = []
 
-function argIsNumber(argument){
-    
-    // for(const char of argument){   --> autre solution avec une forof à la place de for
-    //     if(isNotNumber(char)){
-    //         return false
-    //     }
-    // } return true
+    let index = 0
+
+    for(let i=0 ; i<string.length ; i++){
     
     
-    
-    for(let i=0 ; i<argument.length ; i++){
+        for(let j=0 ; j<min.length ; j++){
         
-        if(isNotNumber(argument[i])){
-            return false
-        } 
-           
-    }return true
+      
+        
+            if((string[i]==min[j]) && (index==0)){
+            newString.push(maj[j])
+            index=index+1
+            }
 
+            else if ((string[i]==min[j]) && (index!==0)){
+            newString.push(min[j])
+            index=index+1
+            }
+
+            else if ((string[i]==maj[j]) && (index!==0)){
+            newString.push(min[j])
+            index=index+1
+            }
+
+            else if ((string[i]==maj[j]) && (index==0)){
+            newString.push(maj[j])
+            index=index+1
+            }
+
+            else if ((string[i]==char[j])){
+            newString.push(char[j])
+            index=0
+            }
+        
+        }
+        
+    }
+    console.log(newString.join(''))
 }
+
+
 // 3 GESTION D'ERREUR
 
-if(args.length==00){
+if(isNaN(args)==false){
     console.log("error");
 }
 
+
+
 // 4 RESOLUTION
 
-else console.log(argIsNumber(args))
 
-
-
-
-
+else returnUppercaseFisrt(args)
 
 

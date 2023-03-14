@@ -2,38 +2,56 @@
 
 const args = process.argv.slice(2)
 
-let argsNumber = []
 
 // 2 FONCTIONS
 
-function getNumber(array, newArray){
-
-
-    for (let i=0 ; i<array.length ; i++){
-        newArray.push(parseInt(array[i]))
+function resultatsSoustractions(tab){
+    resultats = []
+    
+    for(let i=0 ; i<tab.length ; i++){
+        for (let j = 0; j < tab.length; j++) {
+            if ((tab[i]-tab[j])!==0){
+                resultats.push(args[i]-args[j])
+            }
+            
+        }
     }
-
 }
 
 
-function my_bubble_sort(array){
+function valAbs(tab){
+    
+    valAbsResult = []
+    
+    for(let j=0 ; j<tab.length ; j++){
+        if(tab[j] < 0){
+            valAbsResult.push(0-tab[j])
+        }
+    else if(resultats[j]>0){
+        valAbsResult.push(tab[j])
+        }
+    
+    }
+}
 
-   
-    for(let i=0 ; i<array.length ; i++){
-        for(let j=0 ; j<array.length ; j++){
+function triTab(tab){
+
+    for(let k=0 ; k<tab.length ; k++){
+        for(let l=0 ; l<tab.length ; l++){
         
-            if(array[j]>array[j+1]){
-                valMax = array[j]
-                array[j] = array[j+1]
-                array[j+1] = valMax
+            if(tab[l]>tab[l+1]){
+                valMin = tab[l]
+                tab[l] = tab[l+1]
+                tab[l+1] = valMin
 
             }
 
-        }
-        
-    } 
-    return array
-}   
+        } 
+    
+    
+    }
+}        
+
 
 function argsFalse(tab){
 
@@ -50,7 +68,8 @@ function tabVide(tab){
         return true
     }
     return false 
-}  
+}    
+
 // 3 GESTION D'ERREUR
 
 if((tabVide(args)) || (argsFalse(args))){
@@ -59,7 +78,10 @@ if((tabVide(args)) || (argsFalse(args))){
 
 // 4 RESOLUTION
 
-else if ((tabVide(args)==false) && argsFalse(args)== false){
-    getNumber(args, argsNumber)
-    console.log(my_bubble_sort(argsNumber).join(' '))
+else if ((tabVide(args)==false) && argsFalse(args)== false){resultatsSoustractions(args);
+valAbs(resultats);
+triTab(valAbsResult);
+
+console.log(valAbsResult[0])
 }
+

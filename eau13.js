@@ -2,44 +2,49 @@
 
 const args = process.argv.slice(2)
 
+let argsNumber = []
 
 // 2 FONCTIONS
 
+function getNumber(array, newArray){
 
 
+    for (let i=0 ; i<array.length ; i++){
+        newArray.push(parseInt(array[i]))
+    }
 
-function tirASCII(array){
-
-    for(let i=0 ; i<array.length ; i++){
-    
-        for (let y=0 ; y<array.length ; y++){
-    
-       
-            if(array[y].charCodeAt(0) > array[i].charCodeAt(0)){
-                
-                vmax = array[y]
-                array[y] = array[i]
-                array[i] = vmax
-                }
-        
-            else if (array[y].charCodeAt(0) == array[i].charCodeAt(0)){
-                for(let z=0 ; z<array[y].length ; z++){
-                    if((array[y].charCodeAt(z) > array[i].charCodeAt(z)) && (array[y].charCodeAt(z-1) == array[i].charCodeAt(z-1))){
-                    
-                        vmax = array[y]
-                        array[y] = array [i]
-                        array[i] = vmax
-
-                    }
-                }
-            }
-
-        }
-    } return array
 }
 
 
+function my_select_sort(array){
 
+   
+    for(let i=0 ; i<array.length ; i++){
+        for(let j=0 ; j<array.length ; j++){
+        
+            if(array[j+1]<array[j]){
+                valMin = array[j+1]
+                array[j+1] = array[j]
+                array[j] = valMin
+
+            }
+
+        }
+        
+    } 
+    return array
+}  
+
+
+function argsFalse(tab){
+
+    for (let i=0 ; i<tab.length ; i++){
+        if(isNaN(tab[i])){
+        return true
+        }
+    }
+    return false
+}
 
 function tabVide(tab){
     if (tab.length < 2){
@@ -49,13 +54,14 @@ function tabVide(tab){
 }  
 // 3 GESTION D'ERREUR
 
-if(tabVide(args)){
+if((tabVide(args)) || (argsFalse(args))){
     console.log("error");
 }
 
 // 4 RESOLUTION
 
-else if (tabVide(args)==false){
-    
-    console.log(tirASCII(args).join(' '))
+else if ((tabVide(args)==false) && argsFalse(args)== false){
+    getNumber(args, argsNumber)
+    console.log(my_select_sort(argsNumber).join(' '))
 }
+

@@ -11,18 +11,20 @@ function inverserTableau(tableau, newTableau){
         newTableau.push(tableau[i])
     }
 }
+
 function lectureDuTableau(tableau){
     for(let i=0 ; i<tableau.length ; i++){
         console.log(tableau[i]);
     }
 }
+
 // 3 GESTION D'ERREUR
 
 function gestionErreur(tableau){
     if(tableau.length==0){
-    console.log("erreur.");
+    console.log("error");
     return false
-}
+    }
 }
 // 4 RESOLUTION
 gestionErreur(args)

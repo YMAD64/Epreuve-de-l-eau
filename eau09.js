@@ -1,43 +1,58 @@
 // 1 ARGUMENTS ET VARIABLES
 
 const args = process.argv.slice(2)
-
+let newArgs = []
 
 // 2 FONCTIONS
 
-function returnIndex(string){
+function getNumber(array, newArray){
 
-    let array = []
-    
-    
-        for (let i=0 ; i<string.length-1 ; i++){
-        array.push(string[i]);
-        }
-     
-    
-    
-    
-        for(let y=0 ; y<array.length ; y++){
-            for(let z=args.length-1 ; z<=args.length ; z++){
-                if(array[y]==(args[z])){
-                    return y
-                
-                }
-            
-            }
-            
-    
-        }   return -1
+
+    for (let i=0 ; i<array.length ; i++){
+        newArray.push(parseInt(array[i]))
+    }
+
 }
+
+
+function valeursCroisantesComprisesEntre(arg1, arg2){
+
+
+    retour = []
+
+    if(arg1<arg2){
+        
+        for(let i=arg1 ; i<arg2 ; i++){
+            retour.push(i);
+            }
+        }
+
+    else if(arg1>arg2){
     
+        for(let i=arg2 ; i<arg1 ; i++){
+        retour.push(i);
+        }
+    }
+
+    retourString = retour.join(' ')
+    console.log(retourString);
+}
 
 
 // 3 GESTION D'ERREUR
 
-if (args.length ==0) {
+if ((args.length !=2) || (isNaN(args[0])) || (isNaN(args[1]))){
     console.log("error");
 } 
 
 // 4 RESOLUTION
 
-else console.log(returnIndex(args));
+else if((args.length == 2 ) && isNaN(args[0])==false && isNaN(args[1])==false){
+getNumber(args, newArgs)
+valeursCroisantesComprisesEntre(newArgs[0], newArgs[1])
+}
+
+
+
+
+
