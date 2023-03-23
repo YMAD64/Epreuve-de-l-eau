@@ -14,10 +14,8 @@ function getIndexesInWord (arg1,arg2){
         if(arg1[i]==arg2[0]){
             
             indexes.push(i)                    
-        }
-                
+        }           
     }
-
 }
 
 
