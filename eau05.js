@@ -7,11 +7,11 @@ arg2 = args[1]
 
 // 2 FONCTIONS
 
-function getIndexesInWord (arg1,arg2){
+function getIndexesInWord (argument1,argument2){
     indexes = []
-    for(let i=0 ; i < arg1.length ; i++){
+    for(let i=0 ; i < argument1.length ; i++){
     
-        if(arg1[i]==arg2[0]){
+        if(argument1[i]==argument2[0]){
             
             indexes.push(i)                    
         }           
@@ -22,11 +22,11 @@ function getIndexesInWord (arg1,arg2){
 
 function includes (tableau, argument1, argument2){
 
-    for(let index of indexes){
+    for(let index of tableau){
         let isGood = true
         
         for(let i=0  ; i<argument2.length; i++){
-            if(arg1[index+i]!==argument2[i]){
+            if(argument1[index+i]!==argument2[i]){
                     isGood = false    
                 }
             }   if(isGood==true){
