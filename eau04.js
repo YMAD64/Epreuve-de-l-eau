@@ -39,4 +39,16 @@ else for(let i=args ; i>=args ; i++){
     }
 }
 
+//////////////////////////////////////////////////////////
+//12/10/23/// AUTRE SOLUTION /////
 
+// let array = []
+//     for (let i=args; i<args*2 ; i++){
+//         if(isPremier(i)){
+//             array.push(i)
+//         }}
+//         if ((array[0])==(args)){
+//             console.log(array[1])
+//         }
+//         else console.log(array[0]);
+    
