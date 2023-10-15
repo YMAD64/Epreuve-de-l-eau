@@ -58,3 +58,39 @@ else if (args.length ==2){
 
     else console.log(false);    
 }   
+
+
+
+/////////////////////////////////////////////////////
+//15/10/23///////////////////
+
+const args = process.argv.slice(2)
+
+let arg1 = args[0]
+let arg2 = args[1]
+
+
+function include(string1,string2){
+    let indexs = []
+    for (let i=0 ; i<string1.length ; i++){
+        if (string1[i]==string2[0]){
+            indexs.push(i)
+            }
+        }
+    if (indexs.length == 0 ){
+        return false
+        }         
+    let isGood = true
+    for (let i=0 ; i<indexs.length ; i++){
+        for (let j=indexs[i] , k=0 ; j<string1.length , k<string2.length ; j++ , k++){
+            if (string1[j]!=string2[k]){
+            isGood = false
+            }
+        }return isGood
+    } 
+}
+
+if(args.length !==2){
+    console.log("erreur");
+}
+else console.log(include(arg1,arg2))
