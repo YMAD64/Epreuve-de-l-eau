@@ -70,4 +70,30 @@ if(isNaN(args)==false){
 
 else returnUppercaseFisrt(args)
 
+////////////////////////////////////////////////////////
+//16/10/23//
+// function majuscule(string){
+//     let array = []
+//     let index = 0 
+    
+//     for (let i=0 ; i<string.length ; i++){
+//         if((index<1) && (string[i].match(/[a-zA-Z]/))){
+//             array.push(string[i].toUpperCase())
+//             index = index + 1
+//         }
+//         else if ((index>=1) && (string[i].match(/[a-zA-Z]/))){
+//             array.push(string[i].toLowerCase())
+//             index = index + 1
+//         }
+//         else if ((index>=0) && (string[i].match(/[,;:!-?.]/))){
+//             array.push(string[i])
+//             index = index + 1
+//         }
+//         else if ((index>=1) && (string[i].match(/[\s]/))){
+//             array.push(string[i])
+//             index = 0
+//         }     
+//     } console.log(array.join('')); 
+// }
 
+// majuscule(stringArgs)

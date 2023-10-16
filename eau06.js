@@ -67,3 +67,40 @@ if(isNaN(args)==false){
 
 
 else returnOneUppercaseOnetwo(args)
+
+
+////////////////////////////////////////////////////
+//16/10/23/////////////////////
+
+
+// function returnMajSurDeux(string){
+     
+//     let newString = []
+//     let index = 0
+//     for(let i=0 ; i<string.length ; i++){
+        
+        
+//             if((string[i].match(/[a-zA-Z]/)) && (index%2==0)){
+//                 newString.push(string[i].toUpperCase())
+//                 index = index + 1
+//             }
+//             else if((string[i].match(/[a-zA-Z]/)) && (index%2==1)){
+//                 newString.push(string[i].toLowerCase())
+//                 index = index + 1
+//             }
+//             else if(string[i].match(/[^a-zA-Z]/)){
+//                 newString.push(string[i])
+//                 index = index
+//             }
+
+            
+            
+            
+//         } 
+
+//      console.log(newString.join(''));
+// }
+
+
+
+// returnMajSurDeux(stringArgs)
