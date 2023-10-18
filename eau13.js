@@ -65,3 +65,24 @@ else if ((tabVide(args)==false) && argsFalse(args)== false){
     console.log(my_select_sort(argsNumber).join(' '))
 }
 
+////////////////////////////////////////////////
+//18/10/23////
+
+
+// const args = process.argv.slice(2)
+
+// function my_select_sort(array){
+
+//     for(let i=0 ; i<array.length ; i++){
+//         let valMin = i
+//         for (let j=i+1; j<array.length ; j++){
+//             if (parseInt(array[j])<parseInt(array[valMin])){
+//                 valMin = j
+//         } 
+//     } 
+//     let temp = array[i]
+//     array[i]= array[valMin]
+//     array[valMin] = temp
+//     } return array
+// }
+// console.log(my_select_sort(args))

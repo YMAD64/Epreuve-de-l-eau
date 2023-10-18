@@ -52,7 +52,32 @@ getNumber(args, newArgs)
 valeursCroisantesComprisesEntre(newArgs[0], newArgs[1])
 }
 
+/////////////////////////////////////////////////////////
+//17/10/23///////////////////
 
+// const args = process.argv.slice(2)
+// const arg1 = parseInt(args[0])
+// const arg2 = parseInt(args[1])
+
+// function between(nb1,nb2){
+//     let arrayList = []
+    
+//     if (nb1<nb2){
+//         nbMin = nb1
+//         nbMax = nb2
+//     }
+//     else if(nb2<nb1){
+//         nbMax = nb1
+//         nbMin = nb2
+//     }
+    
+//     for(let i=nbMin ; i<nbMax ; i++){
+//       arrayList.push(i);  
+//     }
+//     console.log(arrayList.join(' '));      
+// }
+
+// between(arg1,arg2)
 
 
 

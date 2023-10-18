@@ -44,13 +44,28 @@ function argIsNumber(argument){
 }
 // 3 GESTION D'ERREUR
 
-if(args.length==00){
+if(args.length==0){
     console.log("error");
 }
 
 // 4 RESOLUTION
 
 else console.log(argIsNumber(args))
+
+//////////////////////////////////////////
+//17/10/23//////////////////
+
+// const args = process.argv.slice(2)
+
+// function onlyNumber(string){
+//     for(let i=0 ; i<string.length ; i++){
+//         if(string[i].match(/[^0-9]/)){
+//             return false
+//         }
+//     } return true
+// }
+
+// console.log(onlyNumber(args))
 
 
 

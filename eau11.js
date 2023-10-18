@@ -85,3 +85,27 @@ triTab(valAbsResult);
 console.log(valAbsResult[0])
 }
 
+/////////////////////////////////////////////////////////////////////
+//17/10/23//
+
+// function difMinAbs(array){
+//     let resultats = []
+    
+    
+//     for(let i=0 ; i<array.length ; i++){
+//         for (let j=0 ; j<array.length ; j++){
+//             if(array[i]-array[j]!=0){resultats.push (Math.abs((array[i]-array[j])))
+//             }
+//         }
+//         for(let i=0 ; i<resultats.length ; i++){
+//             for (let j=0 ; j<resultats.length ; j++){
+//                 if(resultats[j]>resultats[j+1]){
+//                 valmin = resultats[j]
+//                 resultats[j] = resultats[j+1]
+//                 resultats[j+1] = valmin
+//                 }
+//             }
+//         }
+//     } return resultats[0]
+// }
+// console.log(difMinAbs(args));

@@ -63,5 +63,20 @@ else if ((tabVide(args)==false) && argsFalse(args)== false){
     getNumber(args, argsNumber)
     console.log(my_bubble_sort(argsNumber).join(' '))
 }
+/////////////////////////////////////////////////////
+//17/10/23///////////////////
 
+// const args = process.argv.slice(2)
+
+// function my_bubble_sort(array){
+
+//     for (let i=0 ; i<array.length ; i++){
+//         for (let j=0 ; j<array.length ; j++){
+//             if(parseInt(array[j])>parseInt(array[j+1])){
+//                 [array[j],array[j+1]]=[array[j+1],array[j]]
+//             }
+//         } 
+//     } return array
+// }
+// console.log(my_bubble_sort(args));
 
